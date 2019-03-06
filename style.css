@@ -74,6 +74,9 @@
   background: #ffac10;
   -webkit-transition-delay: 0.1s;
           transition-delay: 0.1s;
+}
+
+.social_icons > :nth-child(1):hover {
   border: 2px solid #ffac10;
 }
 
@@ -85,6 +88,9 @@
   background: #007bff;
   -webkit-transition-delay: 0.4s;
           transition-delay: 0.4s;
+}
+
+.social_icons > :nth-child(2):hover {
   border: 2px solid #007bff;
 }
 
@@ -96,6 +102,9 @@
   background: #059C72;
   -webkit-transition-delay: 0.7s;
           transition-delay: 0.7s;
+}
+
+.social_icons > :nth-child(3):hover {
   border: 2px solid #059C72;
 }
 
@@ -107,6 +116,9 @@
   background: #FE0672;
   -webkit-transition-delay: 0.9s;
           transition-delay: 0.9s;
+}
+
+.social_icons > :nth-child(4):hover {
   border: 2px solid #FE0672;
 }
 
@@ -118,6 +130,9 @@
   background: #5E0808;
   -webkit-transition-delay: 1s;
           transition-delay: 1s;
+}
+
+.social_icons > :nth-child(5):hover {
   border: 2px solid #5E0808;
 }
 
@@ -133,12 +148,13 @@
 .social_icons div {
   -webkit-transform: translateX(150%);
           transform: translateX(150%);
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
   position: relative;
   width: 40px;
   height: 40px;
-  border: 2px solid #000 !important;
   background: #000 !important;
   border-radius: 100%;
   display: -webkit-box;
@@ -161,10 +177,11 @@
   border-radius: 5px;
   z-index: 100;
   left: 200%;
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
   -webkit-transition: all 0.8s;
   transition: all 0.8s;
+  margin-bottom: 0rem !important;
 }
 
 .social_icons div:hover {
