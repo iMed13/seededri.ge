@@ -238,6 +238,20 @@ header .header_menu .logo_header {
 
 header .header_menu .logo_header img {
   width: 200px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+@media (max-width: 1000px) {
+  header .header_menu .logo_header img {
+    width: 150px;
+  }
+}
+
+@media (max-width: 500px) {
+  header .header_menu .logo_header img {
+    width: 100px;
+  }
 }
 
 header .header_menu .header_hamburg {

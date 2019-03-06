@@ -170,6 +170,11 @@ header
             float: left !important
             img
                 width: 200px
+                transition: all 0.5s
+                +laptop_sm
+                    width: 150px
+                +mobile
+                    width: 100px
         .header_hamburg
             position: relative
             z-index: 999999
