@@ -1,0 +1,279 @@
+
+// MIX INS
+$large: 2500px
+$middle: 1900px
+$laptop_lg: 1450px
+$laptop_md: 1250px
+$laptop_sm: 1000px
+$tablet: 767px
+$mobile: 500px
+$iphone5: 330px
+
+=large
+  @media (max-width: #{$large})
+    @content
+=middle
+  @media (max-width: #{$middle})
+    @content
+=laptop_lg
+  @media (max-width: #{$laptop_lg})
+    @content
+=laptop_md
+  @media (max-width: #{$laptop_md})
+    @content
+=laptop_sm
+  @media (max-width: #{$laptop_sm})
+    @content
+=tablet
+  @media (max-width: #{$tablet})
+    @content
+=mobile
+  @media (max-width: #{$mobile})
+    @content
+=iphone5
+  @media (max-width: #{$iphone5})
+    @content
+
+//---------------------------------------------------------------
+//---------------------------------------------------------------
+//---------------------------------------------------------------
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    text-decoration: none !important
+    list-style-type: none !important
+.active_search_form
+    left: 0 !important
+    z-index: 99999 !important
+.search_section
+    position: fixed
+    left: -150%
+    top: 0
+    height: 100vh
+    background: rgba(0,0,0,0.8)
+    transition: all 0.8s
+    z-index: -1
+    form
+        height: 100%
+        display: flex
+        justify-content: center
+        align-items: center
+        input
+            width: 100%
+            border: none
+            outline: none
+            padding: 15px
+            border-radius: 15px
+            &::placeholder
+                font-family: header_font
+
+
+.social_icons
+    position: fixed
+    right: 10px
+    top: 50%
+    transform: translateY(-50%)
+    z-index: 9999
+    width: 50px
+    //background: green
+    //overflow: hidden
+    &>:nth-child(1)
+        background: #ffac10 
+        transition-delay: 0.1s
+        border: 2px solid #ffac10
+        .title
+            background: #ffac10 
+
+    &>:nth-child(2)
+        background: #007bff 
+        transition-delay: 0.4s
+        border: 2px solid #007bff
+        .title
+            background: #007bff 
+    &>:nth-child(3)
+        background: #059C72 
+        transition-delay: 0.7s
+        border: 2px solid #059C72
+        .title
+            background: #059C72 
+    &>:nth-child(4)
+        background: #FE0672 
+        transition-delay: 0.9s
+        border: 2px solid #FE0672
+        .title
+            background: #FE0672 
+    &>:nth-child(5)
+        background: #5E0808
+        transition-delay: 1s
+        border: 2px solid #5E0808
+        .title
+            background: #5E0808 
+    .social_animation
+        transform: translateX(0%) !important
+    div
+        transform: translateX(150%)
+        transition: all 0.5s
+        position: relative
+        width: 40px
+        height: 40px
+        border: 2px solid #000 !important
+        background: #000 !important
+        border-radius: 100%
+        display: flex
+        justify-content: center
+        align-items: center
+        margin: 15px 0
+        .title
+            position: absolute
+            color: #fff
+            font-family: header_font
+            padding: 5px 10px
+            border-radius: 5px
+            //background: red
+            z-index: 100
+            left: 200%
+            transform: rotate(90deg)
+            transition: all 0.8s
+        &:hover
+            cursor: pointer
+            transition-delay: 0s !important
+            background: transparent !important
+            .title
+                left: -350% !important
+                transform: rotate(0deg)
+        .fas, .fab
+            color: #fff !important
+            
+header
+    position: fixed
+    left: 0
+    top: 20px
+    z-index: 999
+    +laptop_md
+        transform: unset !important
+    .container
+        //background: red
+        max-width: 1500px !important
+        padding: 0 30px !important
+    .header_menu
+        display: flex
+        justify-content: space-between
+        align-items: center
+        .logo_header
+            float: left !important
+            img
+                width: 200px
+        .header_hamburg
+            position: relative
+            z-index: 999999
+            display: none
+            +laptop_md
+                display: block !important
+            .fas
+                color: #fff
+                font-size: 25px
+                padding: 5px 10px
+                border: 1px solid #f1f1f1
+                border-radius: 5px
+                cursor: pointer
+        ul
+            display: flex
+            justify-content: flex-end
+            align-items: center
+            margin-bottom: 0rem !important
+        .logo_ul
+            padding: 15px
+            position: relative
+            z-index: 10
+            img
+                position: relative
+                z-index: 10
+                
+            &:after
+                content: ""
+                position: absolute
+                left: 0
+                bottom: 0
+                width: 100%
+                background: #fff
+                height: 500px
+                z-index: 0
+                border-radius: 0 0 150px 150px
+        .active_menu_ul
+            //display: block !important
+            right: 0 !important
+        .menu_ul
+            +laptop_md
+                //display: none
+                position: fixed !important
+                z-index: 999
+                display: flex !important
+                flex-direction: column !important
+                align-items: center !important
+                justify-content: center !important
+                width: 100% !important
+                height: 100vh
+                transition: all 0.5s
+                right: 150%
+                top: 0
+                background: rgba(0,0,0,0.8)
+            .search_button
+                .fas
+                    color: #fff
+                    font-size: 20px
+                    padding: 0 10px
+                    cursor: pointer
+                    transition: all 0.5s
+                    &:hover
+                        transform: translateY(-5px)
+            li
+                overflow: hidden
+                padding: 5px 0
+                a
+                    color: #fff
+                    font-size: 20px
+                    font-family: header_font
+                    font-weight: 100
+                    padding: 0 20px
+                    position: relative
+                    &:after
+                        content: ""
+                        position: absolute
+                        left: -100%
+                        bottom: -5px
+                        width: 80%
+                        height: 1px
+                        background: #fff
+                        transition: all 4s !important
+                        transform: translateX(-50%)
+                    &:hover:after
+                        left: 50%
+                        animation: menuafter 1s !important
+
+.loaded_index
+    padding: unset !important
+    display: flex
+    .loaded_video
+        width: 100%
+        min-height: 100vh
+        height: 100vh
+        background: #000
+        overflow: hidden
+        #loadedVideo
+            width: 100%
+            +middle
+                position: relative
+                left: 50%
+                width: unset !important
+                transform: translateX(-50%)
+            +laptop_lg
+                height: 100%
+    .loaded_diagonal
+        position: fixed   
+        right: -50vw
+        top: 200px
+        left: -50vw
+        height: 400px
+        background: rgba(255,172,16,0.6)
+        transform: rotateZ(-25deg)
