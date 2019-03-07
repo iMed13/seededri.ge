@@ -1,23 +1,17 @@
-$(window).mousemove(function(e) {
-    //parallaxIt(e, ".social_icons", -10);
-    if($( window ).width()<= 1250)
-    {
-      parallaxIt(e, "header", 0);
-    }
-    else
-    {
-      parallaxIt(e, "header", -50);
-    }
-  });
+// $(window).mousemove(function(e) {
+//     parallaxIt(e, ".address_content", -100);
+//   });
   
-  function parallaxIt(e, target, movement) {
-    var $this = $(".loaded_index");
-    var relX = e.pageX - $this.offset().left;
+//   function parallaxIt(e, target, movement) {
+//     var $this = $(window);
+//     var relX = e.pageX - $this.offset().left;
+//     var relY = e.pageY - $this.offset().top;
   
-    TweenMax.to(target, 1, {
-      x: (relX - $this.width() / 2) / $this.width() * movement
-    });
-  }
+//     TweenMax.to(target, 1, {
+//       x: (relX - $this.width() / 2) / $this.width() * movement,
+//       y: (relY - $this.height() / 2) / $this.height() * movement
+//     });
+//   }
   $( document ).ready(function() {
     $(".social_icons").children().addClass("social_animation");
   });
@@ -31,3 +25,18 @@ $(window).mousemove(function(e) {
   $(".header_hamburg").click(function(){
     $(".menu_ul").toggleClass("active_menu_ul");
   });
+
+  $(".address_p").click(function(){
+    setTimeout(function(){ $(".address_content").toggleClass("active_address_content"); }, 500);
+    $(".addres_popup").toggleClass("active_address");
+    $(".contact_popup").removeClass("active_address");
+    setTimeout(function(){ $(".contact_content").removeClass("active_address_content"); }, 500);
+  });
+  $(".contact_p").click(function(){
+    setTimeout(function(){ $(".contact_content").toggleClass("active_address_content"); }, 500);
+    $(".contact_popup").toggleClass("active_address");
+    $(".addres_popup").removeClass("active_address");
+    setTimeout(function(){ $(".address_content").removeClass("active_address_content"); }, 500);
+  });
+
+  $(".other_pages").siblings("header").css("position", "unset");

@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Cannabis Seed</title>
+    <title>Seed</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
         crossorigin="anonymous">
@@ -24,36 +24,81 @@
             10%{left: -10%; transition-delay: 0.5s;}
             100%{left: 50% !important;}
         }
+        @keyframes addrespin {
+            0%{transform: translateY(0px);}
+            10%{transform: translateY(-10px);}
+            100%{transform: translateY(0px);}
+        }
         
     </style>
 </head>
 
 <body>
+    <section class="contact_popup">
+        <div class="contact_content">
+            <div class="address_info">
+                <i class="fas fa-envelope"></i>
+                <span><a href="mailto: seededri@gmail.com"> seededri@gmail.com</a></span>
+            </div>
+            <div class="store_front"><img src="" alt=""></div>
+        </div>
+    </section>
+    <section class="addres_popup">
+        <div class="address_content">
+            <div class="map_content">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2978.5787433702417!2d44.75949708656411!3d41.70802885624116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4044733463448c9f%3A0x5b7cfbce393565e2!2z4YOQ4YOR4YOQ4YOo4YOY4YOr4YOY4YOhIOGDpeGDo-GDqeGDkCwg4YOX4YOR4YOY4YOa4YOY4YOh4YOY!5e0!3m2!1ska!2sge!4v1551940427377"
+                    frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+            <div class="address_info">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>თბილისი, აბაშიძის #დაუდგენელი</span>
+            </div>
+        </div>
+    </section>
+    <section class="container-fluid search_section">
+        <form action="#" class="container">
+            <input type="text" placeholder="ძიება">
+        </form>
+    </section>
     <section class="social_icons">
-        <div> <a href="#"><i class="fab fa-facebook-f"></i></a> </div>
-        <div> <a href="#"></a><i class="fab fa-twitter"></i></a> </div>
-        <div> <a href="#"></a><i class="fas fa-at"></i></a> </div>
-        <div> <a href="#"></a><i class="fab fa-instagram"></i></a> </div>
-        <div> <a href="#"></a><i class="fas fa-map-marker-alt"></i></a> </div>
+        <div> <a href="https://www.facebook.com/groups/seededri.ge/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <p class="title">სეისბურგი</p>
+        </div>
+        <div> <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+            <p class="title">ჭვიშტარი</p>
+        </div>
+        <div> <a href="https://www.instagram.com/seed.edri/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <p class="title">ინტიგრამი</p>
+        </div>
     </section>
     <header class="container-fluid">
         <section class="container">
             <nav class="header_menu">
                 <ul class="logo_ul">
-                    <li class="logo_header"><a href="#"><img src="assets/media/logo1.png" alt=""></a></li>
+                    <li class="logo_header"><a href="index.html"><img src="assets/media/logo1.png" alt=""></a></li>
                 </ul>
                 <ul class="menu_ul">
-                    <li><a href="#">კანაფის თესლი</a></li>
+                    <li><a href="seeds.html">კანაფის თესლი</a></li>
                     <li><a href="#">აქსესუარები</a></li>
                     <li><a href="#">მეტი</a></li>
+                    <li class="search_button"><i class="fas fa-search"></i></li>
                 </ul>
+                <section class="header_hamburg"><i class="fas fa-bars"></i></section>
             </nav>
         </section>
     </header>
-    <main class="container-fluid">
+    <main class="container-fluid other_pages">
         
     </main>
-    <footer></footer>
+    <footer class="container-fluid">
+        <section class="container">
+            <section class="row">
+                <section class="col-md-4"></section>
+                <section class="col-md-4"></section>
+                <section class="col-md-4"></section>
+            </section>
+        </section>
+    </footer>
 
     <!-- ------------------S C R I P T  S----------------------------- -->
     <!-- -----------------BOOSTRAP 4------------------- -->

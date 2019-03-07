@@ -43,6 +43,57 @@ $iphone5: 330px
     box-sizing: border-box
     text-decoration: none !important
     list-style-type: none !important
+.active_address
+    width: 100% !important
+    height: 100vh !important
+    z-index: 1000
+    visibility: visible !important
+.addres_popup, .contact_popup
+    transition: all 0.58s
+    width: 0
+    height: 0
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+    position: fixed
+    background: rgba(38, 0, 97,.98)
+    visibility: hidden
+    display: flex
+    justify-content: center
+    align-items: center
+    overflow: hidden
+    .active_address_content
+        visibility: visible !important
+        transform: translateY(0) !important
+    .address_content, .contact_content
+        visibility: hidden
+        transition: transform 2s, visibility 5s !important
+        transform: translateY(500px)
+        max-width: 1000px
+        width: 100%
+        padding: 50px 
+        border-radius: 20px
+        background: #fff
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        .map_content
+            width: 100%
+            iframe
+                width: 100%
+                height: 300px
+        .address_info
+            padding: 20px 0
+            .fas
+                font-size: 25px
+                color: red
+                transition: all 2s
+                animation: addrespin 3s infinite
+                margin-right: 15px
+            span
+                font-family: header_font
+        .store_front
 .active_search_form
     left: 0 !important
     z-index: 99999 !important
@@ -129,6 +180,13 @@ $iphone5: 330px
         justify-content: center
         align-items: center
         margin: 15px 0
+        a
+            display: flex
+            justify-content: center 
+            align-items: center
+            width: 100%
+            height: 100%
+            text-align: center
         .title
             position: absolute
             color: #fff
@@ -261,7 +319,9 @@ header
                     &:hover:after
                         left: 50%
                         animation: menuafter 1s !important
-
+.other_pages
+    min-height: 100vh
+    background: #010101
 .loaded_index
     padding: unset !important
     display: flex
@@ -288,3 +348,6 @@ header
         height: 400px
         background: rgba(255,172,16,0.6)
         transform: rotateZ(-25deg)
+footer
+    background: #010101
+    padding: 20px 0

@@ -7,6 +7,98 @@
   list-style-type: none !important;
 }
 
+.active_address {
+  width: 100% !important;
+  height: 100vh !important;
+  z-index: 1000;
+  visibility: visible !important;
+}
+
+.addres_popup, .contact_popup {
+  -webkit-transition: all 0.58s;
+  transition: all 0.58s;
+  width: 0;
+  height: 0;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  position: fixed;
+  background: rgba(38, 0, 97, 0.98);
+  visibility: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+
+.addres_popup .active_address_content, .contact_popup .active_address_content {
+  visibility: visible !important;
+  -webkit-transform: translateY(0) !important;
+          transform: translateY(0) !important;
+}
+
+.addres_popup .address_content, .addres_popup .contact_content, .contact_popup .address_content, .contact_popup .contact_content {
+  visibility: hidden;
+  -webkit-transition: visibility 5s, -webkit-transform 2s !important;
+  transition: visibility 5s, -webkit-transform 2s !important;
+  transition: transform 2s, visibility 5s !important;
+  transition: transform 2s, visibility 5s, -webkit-transform 2s !important;
+  -webkit-transform: translateY(500px);
+          transform: translateY(500px);
+  max-width: 1000px;
+  width: 100%;
+  padding: 50px;
+  border-radius: 20px;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.addres_popup .address_content .map_content, .addres_popup .contact_content .map_content, .contact_popup .address_content .map_content, .contact_popup .contact_content .map_content {
+  width: 100%;
+}
+
+.addres_popup .address_content .map_content iframe, .addres_popup .contact_content .map_content iframe, .contact_popup .address_content .map_content iframe, .contact_popup .contact_content .map_content iframe {
+  width: 100%;
+  height: 300px;
+}
+
+.addres_popup .address_content .address_info, .addres_popup .contact_content .address_info, .contact_popup .address_content .address_info, .contact_popup .contact_content .address_info {
+  padding: 20px 0;
+}
+
+.addres_popup .address_content .address_info .fas, .addres_popup .contact_content .address_info .fas, .contact_popup .address_content .address_info .fas, .contact_popup .contact_content .address_info .fas {
+  font-size: 25px;
+  color: red;
+  -webkit-transition: all 2s;
+  transition: all 2s;
+  -webkit-animation: addrespin 3s infinite;
+          animation: addrespin 3s infinite;
+  margin-right: 15px;
+}
+
+.addres_popup .address_content .address_info span, .addres_popup .contact_content .address_info span, .contact_popup .address_content .address_info span, .contact_popup .contact_content .address_info span {
+  font-family: header_font;
+}
+
 .active_search_form {
   left: 0 !important;
   z-index: 99999 !important;
@@ -167,6 +259,21 @@
       -ms-flex-align: center;
           align-items: center;
   margin: 15px 0;
+}
+
+.social_icons div a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  text-align: center;
 }
 
 .social_icons div .title {
@@ -390,6 +497,11 @@ header .header_menu .menu_ul li a:hover:after {
           animation: menuafter 1s !important;
 }
 
+.other_pages {
+  min-height: 100vh;
+  background: #010101;
+}
+
 .loaded_index {
   padding: unset !important;
   display: -webkit-box;
@@ -434,5 +546,10 @@ header .header_menu .menu_ul li a:hover:after {
   background: rgba(255, 172, 16, 0.6);
   -webkit-transform: rotateZ(-25deg);
           transform: rotateZ(-25deg);
+}
+
+footer {
+  background: #010101;
+  padding: 20px 0;
 }
 /*# sourceMappingURL=style.css.map */
